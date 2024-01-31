@@ -11,7 +11,7 @@
 
   tasks:
     - name: Check the time
-      command: datemdhftysbdf
+      command: date
 #      when: ansible_distribution == "patrick" or ansible_processor_nproc == 2
     - name: create user patrick
       user:

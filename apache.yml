@@ -5,19 +5,19 @@
   tasks:
       - name: update the system
         yum:
-          name: '*'
+            name: '*'
           state: latest
       - name: install httpd
         package:
-          name: httpd
-          state: present
+            name: httpd
+        state: present
         tags:
             - install
       - name: start the httpd Daemon
         systemd:
-          name: httpd
-          state: started
-          enabled: yes
+            name: httpd
+        state: started
+          enabled: true
       - name: copy index file to target
           copy:
             src: index.html
